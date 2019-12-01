@@ -1,0 +1,7 @@
+.pytest_cache/*
+
+Homework/*
+ip_validator.egg-info/*
+*/__pycache__/*
+venv/*
+
