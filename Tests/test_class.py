@@ -1,6 +1,6 @@
 import pytest
-from ip_validator.ip_validator import Validate
-#from ip_validator.ip_validator_source import Validate
+#from ip_validator.ip_validator import Validate
+from ip_validator.ip_validator_source import Validate
 from Tests.addition_func import generate_novalid_ip, preparation_predict
 
 
