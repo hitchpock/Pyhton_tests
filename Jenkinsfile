@@ -27,7 +27,7 @@ pipeline{
                 echo "========executing Test========"
                 sh """ . venv/bin/activate
                 cd Tests/
-                pytest --setup-show test_class.py -s -q"""
+                pytest --setup-show test_class.py -q"""
             }
             post{
                 always{
