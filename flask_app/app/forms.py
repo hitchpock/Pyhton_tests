@@ -3,5 +3,8 @@ from wtforms import SubmitField, StringField
 
 
 class SendMessage(FlaskForm):
+    """
+    Форма для кнопки.
+    """
     input_str = StringField("Введите IP адрес")
     submit = SubmitField("Отправить")
