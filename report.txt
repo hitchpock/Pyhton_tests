@@ -1,0 +1,4 @@
+1) Validator неправильно обрабатывает ipv4 со значением 255. TestExtremePoint().test_extreme_point_ipv4()
+2) Validator пропускает букву G в обоих регистрах и считает ip адрес валидным. TestExtremePoint().test_bad_input_ipv6()
+3) Validator считает ip адрес loopback('0:0:0:0:0:0:0:1') не валидным. TestExtremePoint().test_extreme_point_ipv6()
+4) Validator не обрабатывает сокращенную нотацию ipv6 (с удаленными хекстетами). TestNotation().test_short_ipv6

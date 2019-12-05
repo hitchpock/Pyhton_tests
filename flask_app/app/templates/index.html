@@ -1,0 +1,7 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{{ wtf.quick_form(form) }}
+
+{% for note in result %}
+    <p style="font-size: 14px; display: inline-block;">{{ note[0] }} | {{ note[1] }}</p>
+{% endfor %}
