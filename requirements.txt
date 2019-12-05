@@ -10,7 +10,7 @@ Flask==1.1.1
 Flask-Bootstrap4==4.0.2
 Flask-WTF==0.14.2
 importlib-metadata==0.23
--e git+git@github.com:hitchpock/tmp.git@bef1d7551c6e48142815a983c0f45da9be545f79#egg=ip_validator
+# -e git+git@github.com:hitchpock/tmp.git@bef1d7551c6e48142815a983c0f45da9be545f79#egg=ip_validator
 itsdangerous==1.1.0
 Jinja2==2.10.3
 MarkupSafe==1.1.1

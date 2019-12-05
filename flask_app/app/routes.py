@@ -4,8 +4,7 @@ from app.forms import SendMessage
 from ip_validator.ip_validator import Validate
 
 
-# @app.route('/')
-@app.route('/index', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 def index():
     """
     Отображение единственной странички на сайте. 
