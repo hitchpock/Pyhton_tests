@@ -39,6 +39,5 @@ def preparation_predict(input_lst, predict):
     :return: двумерный массив вида [[ip1, predict], [ip2, predict], ...]
     :rtype: list(list)
     """
-    result = [[x] for x in input_lst]
-    list(map(lambda x: x.append(predict), result))
+    result = [[x] + [predict] for x in input_lst]
     return result
