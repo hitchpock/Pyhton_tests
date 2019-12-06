@@ -1,7 +1,7 @@
 """
 Файл навигации по приложению.
 """
-from flask import render_template, redirect, url_for
+from flask import render_template
 from app import app
 from app.forms import SendMessage
 from ip_validator.ip_validator import Validate
@@ -10,7 +10,7 @@ from ip_validator.ip_validator import Validate
 @app.route('/', methods=['POST', 'GET'])
 def index():
     """
-    Отображение единственной странички на сайте. 
+    Отображение единственной странички на сайте.
     """
     form = SendMessage()
     if form.validate_on_submit():

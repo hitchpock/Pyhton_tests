@@ -1,21 +1,21 @@
 import pytest
-#from ip_validator.ip_validator import Validate
+# from ip_validator.ip_validator import Validate
 from ip_validator.ip_validator_source import Validate
 from Tests.addition_func import generate_novalid_ip, preparation_predict
 
 
 @pytest.fixture(scope='class')
 def class_scope():
-    #print("\n> Class setup")
+    # print("\n> Class setup")
     yield
-    #print("> Class teardown")
+    # print("> Class teardown")
 
 
 @pytest.fixture(scope='function')
 def func_scope():
-    #print("   > Method setup")
+    # print("   > Method setup")
     yield
-    #print("\n   > Method teardown")
+    # print("\n   > Method teardown")
 
 
 @pytest.mark.usefixtures('class_scope')
@@ -33,7 +33,8 @@ class TestGoodInput():
                      '18.10.20.30']
 
         result = [['10.10.20.30', 'Valid IPv4', ],
-                  ['250.10.20.30', 'Valid IPv4'], ['18.10.20.30', 'Valid IPv4']]
+                  ['250.10.20.30', 'Valid IPv4'], 
+                  ['18.10.20.30', 'Valid IPv4']]
 
         assert Validate().validateIPAddress(input_ips) == result
 
@@ -122,8 +123,6 @@ class TestExtremePoint():
                      '0:0:0:0:0:0:0:1',
                      'FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF']
 
-        input_ips_lower = [x.lower() for x in input_ips]
-
         result = [['0:0:0:0:0:0:0:0', 'Valid IPv6'],
                   ['0:0:0:0:0:0:0:1', 'Valid IPv6'],
                   ['FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF', 'Valid IPv6']]
@@ -166,8 +165,7 @@ class TestNotation():
         Метод тестирования функции на ввод ipv6 в сокращенной нотации, с удаленными нулевыми хекстетами.
         """
 
-        input_ips = ['2001:DB8::EFF:FE15:9501',
-                     '2001::d1:0']
+        input_ips = ['2001:DB8::EFF:FE15:9501', '2001::d1:0']
         
         result = preparation_predict(input_ips, 'Valid IPv6')
         
